@@ -1,0 +1,333 @@
+/* ------------------css generaux------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+p {
+    font-size: 1.3rem;
+}
+a {
+     text-decoration: none;
+     color:red; 
+
+}
+li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ----------------------------version mobile------------------------------- */
+
+/* ------------------------------------header---------------------- */
+
+ .navbar {
+     background-color: white;
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: relative;
+ }
+ .icon {
+     fill: black;
+     cursor: pointer;
+ }
+ .navbar input, .nav-menu, .dropdown {
+     display: none;
+ }
+ 
+ [id^=btn]:checked + ul {
+     display: block;
+ }
+ /* quand id commencant par btn est coché, alors je cache mon menu ul*/
+ 
+ .nav-menu {
+     position: absolute;
+     background-color: #303030;
+     top: 142px;
+     left: 0;
+     right: 0;
+     padding-left: 20px;
+     border-top: 5px #C6B700 solid;
+     width: 100%;
+     text-align: center;
+     z-index: 4;
+
+ }
+ .nav-item a, .drop-item a, .show{
+     line-height: 70px;
+     font-size: 1.4rem; 
+     color: #fff;
+     background-color: #303030;
+     padding: 20px;
+     transition: all 1s ease-out;
+     border-radius: 20px;
+ }
+ 
+ .nav-menu a:hover, .show:hover, .nav-menu a:focus, .show:focus{
+  color: red;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  background-color: #fff;
+}
+header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+ /*---------------------------------main-------------------------------*/
+main {
+    background-color: #303030;
+    color: white;
+}
+main h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+/*footer*/
+
+footer {
+    background-color: white;
+    color: #303030;
+}
+
+/*------------------dividers-----------------------*/
+
+.divider {
+    border-bottom: 5px #C6B700 solid;
+    width: 100%;
+}
+.little-divider {
+    border: rgb(224, 0, 0) 1px solid;
+    width: 10%;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/*------------------------ fin dividers------------------------- */
+
+ /* -------------transfert css------------------------- */
+
+ main section#presentation {
+    text-align: center;
+}
+
+/* les activitées */
+
+#flex {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+figure.photo-combat {
+    margin: 0 auto;
+}
+article.styles-combats p {
+    text-align:center;
+    padding-top: 10px;
+}
+article h3 {
+    text-align:center;
+}
+figure.photo-combat img {
+    width: 100%;
+}
+ article.styles-combats {
+    padding-bottom: 15px;
+    background-color: white;
+    color: #303030;
+    border: 3px rgba(255, 0, 0, 0.603) solid;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+/* fin activitée */
+
+/* -------------------------bloc actualité------------ */
+
+section#actuality {
+    text-align: center;
+}
+section#actuality img {
+    width: 60%;
+}
+section#actuality h2 {
+    margin-top: 30px;
+}
+section#actuality h3 {
+    margin: 20px auto 20px;
+}
+section#actuality p {
+    margin-bottom:  10px;
+}
+/* -------------------------fin bloc actualité------------ */
+
+/* -------------------footer------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    width: 100%;
+    height: 200px;
+    padding-right: 20px;
+}
+footer h4{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+#propos {
+    text-align: center;
+}
+/* ----------------------images------------------------------------------- */
+#photo-header-main {
+    position: relative;
+}
+#photo-header-main img {
+    width: 100%;
+    opacity: 0.6;
+    margin-bottom: 0px;
+}
+#photo-header-main h2 {
+    position: absolute;
+    width: 100%;
+    top:30%;
+    right: 0%;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red;
+    text-shadow: 2px 2px 2px black;
+    /* transform: translate(-50%, -50%); */
+}
+/* ------------------------media queries pour tablette---------------------------- */
+@media screen and (min-width:990px) and (max-width:1199px) {
+    footer i {
+        font-size: 30px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer .footer-contact {
+        width: 30%;
+    }
+    #flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    article.styles-combats {
+        width: 40%;
+    }
+}
+@media screen and (min-width:990px) and (max-width:1199px) {
+    
+    article.card-activity {
+        width: 50%;
+        
+    }
+    section#cards-activity {
+            flex-direction: row;
+            justify-content: center;
+    }
+    footer i {
+        font-size: 30px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer .footer-contact {
+        width: 30%;
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+    footer i {
+        font-size: 40px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer .footer-contact {
+        width: 30%;
+    }
+    #flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    article.styles-combats {
+        width: 30%;
+        height: 355px;
+    }
+    nav h1{
+        text-align: center;
+    }
+ /* ------------------- menu navigation------------------------------- */
+ .icon {
+    display: none;
+}
+.nav-menu {
+    display: initial;
+    position: static;
+    background-color: white;
+    border-top: none;
+}
+.nav-item {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    background-color: white;
+}
+.dropdown {
+    position: absolute;
+    background-color: #303030;
+    top: 70px;
+    right: 0;
+    padding: 40px;
+    width: max-content;
+}
+.nav-menu a {
+    background-color: white;
+    color: #303030;
+    font-weight: bold;
+    }
+  }

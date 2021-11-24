@@ -1,0 +1,286 @@
+/* ------------------css generaux------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+main {
+    background-color: #303030;
+    color: white;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+p {
+    font-size: 1.3rem;
+
+}
+a {
+     text-decoration: none;
+     color:red; 
+
+}
+li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ------------------------------------header---------------------- */
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.icon {
+    fill: black;
+    cursor: pointer;
+}
+.navbar input, .nav-menu, .dropdown {
+    display: none;
+}
+
+[id^=btn]:checked + ul {
+    display: block;
+}
+/* quand id commencant par btn est coché, alors je cache mon menu ul*/
+
+.nav-menu {
+    position: absolute;
+    background-color: #303030;
+    top: 142px;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+    border-top: 5px #C6B700 solid;
+    width: 100%;
+    z-index: 4;
+
+}
+.nav-item a, .drop-item a, .show{
+    line-height: 70px;
+    font-size: 1.4rem; 
+    color: #fff;
+    background-color: #303030;
+    padding: 20px;
+    transition: all 1s ease-out;
+    border-radius: 20px;
+}
+
+.nav-menu a:hover, .show:hover, .nav-menu a:focus, .show:focus{
+ color: red;
+ font-weight: bold;
+ letter-spacing: 0.5rem;
+ background-color: #fff;
+}
+header img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   margin-top: 20px;
+}
+/* -------------------------main------------------ */
+main {
+    padding-bottom: 15px;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+} 
+main h1 {
+    padding: 20px 0;
+}
+main p {
+    margin-bottom: 85px;
+
+}
+/*------------------dividers-----------------------*/
+
+.divider {
+    border-bottom: 5px #C6B700 solid;
+    width: 100%;
+}
+.little-divider {
+    border: rgb(224, 0, 0) 1px solid;
+    width: 10%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+/*------------------------ fin dividers------------------------- */
+
+/* -------------------footer------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    width: 100%;
+    height: 200px;
+    padding-right: 20px;
+    background-color: white;
+    color: #303030;
+}
+footer h4{
+    margin-bottom: 10px; 
+    font-size: 1.4rem;
+}
+#propos {
+    margin: 0 auto;
+}
+/* -------------------flip card main------------------ */
+
+.style-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+.card-flip-gestion {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.style-card:hover .card-flip-gestion {
+    transform: rotateY(180deg);
+  }
+
+.card, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+.card {
+    /* background-color: #bbb; */
+    color: white;
+    font-size: 2.5rem;
+}
+.card h2 {
+    margin-top: -50px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px black ;
+  }
+  .flip-card-back {
+    background-color: #303030;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back h2 {
+      margin-bottom:10px ;
+  }
+  #cards-activity{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  @media screen and (min-width:990px) and (max-width:1199px) {
+    
+    article.card-activity {
+        width: 50%;
+        
+    }
+    section#cards-activity {
+            flex-direction: row;
+            justify-content: center;
+    }
+    footer i {
+        font-size: 30px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer .footer-contact {
+        width: 30%;
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+      article.card-activity {
+        width: 30%;
+        
+    }
+    section#cards-activity {
+            flex-direction: row;
+            justify-content: center;
+    }
+
+    footer i {
+        font-size: 40px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer .footer-contact {
+        width: 30%;
+    }
+ /* ------------------- menu navigation------------------------------- */
+ .icon {
+    display: none;
+}
+.nav-menu {
+    display: initial;
+    position: static;
+    background-color: white;
+    border-top: none;
+}
+.nav-item {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    background-color: white;
+}
+.dropdown {
+    position: absolute;
+    background-color: #303030;
+    top: 70px;
+    right: 0;
+    padding: 40px;
+    width: max-content;
+}
+.nav-menu a {
+    background-color: white;
+    color: #303030;
+    font-weight: bold;
+    }
+  }
