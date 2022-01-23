@@ -6,13 +6,18 @@
 }
 body {
     background-color: white;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 0.5px;
+    min-width: 600px;
 }
-
+footer, article.styles-combats p {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
 h2 {
     font-size: 1.6rem;
     font-weight: bold;
+    margin-bottom: 30px;
+    
 }
 
 h3 {
@@ -22,7 +27,8 @@ h4 {
     font-size: 1.4rem;
 }
 p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 a {
      text-decoration: none;
@@ -39,9 +45,9 @@ li {
     width: 100%;
     margin: 0 auto;
 }
+/* ------------------ fin css generaux------------------ */
 
 /* ----------------------------version mobile------------------------------- */
-
 /* ------------------------------------header---------------------- */
 
  .navbar {
@@ -100,22 +106,7 @@ header img {
     object-fit: cover;
     margin-top: 20px;
 }
- /*---------------------------------main-------------------------------*/
-main {
-    background-color: #303030;
-    color: white;
-}
-main h2 {
-    padding-top: 20px;
-    text-align: center;
-}
-
-/*footer*/
-
-footer {
-    background-color: white;
-    color: #303030;
-}
+/* ------------------------------------fin header---------------------- */
 
 /*------------------dividers-----------------------*/
 
@@ -123,18 +114,30 @@ footer {
     border-bottom: 5px #C6B700 solid;
     width: 100%;
 }
-.little-divider {
+/* .little-divider {
     border: rgb(224, 0, 0) 1px solid;
     width: 10%;
     display: flex;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 30px;
-}
-
+} */
 /*------------------------ fin dividers------------------------- */
 
- /* -------------transfert css------------------------- */
+/*---------------------------------main-------------------------------*/
+main {
+    background-color: #303030;
+    color: white;
+}
+main h2 {
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(184, 27, 27);
+    
+}
+#title-bandeau{
+    color: white;
+}
 
  main section#presentation {
     text-align: center;
@@ -150,12 +153,19 @@ footer {
 }
 figure.photo-combat {
     margin: 0 auto;
+    filter: grayscale(1);
+}
+figure.photo-combat:hover {
+    filter: grayscale(0);
 }
 article.styles-combats p {
-    text-align:center;
     padding-top: 10px;
 }
 article h3 {
+    color: red;
+    font-weight: bold;
+}
+article h3, article.styles-combats p {
     text-align:center;
 }
 figure.photo-combat img {
@@ -191,28 +201,35 @@ section#actuality p {
     margin-bottom:  10px;
 }
 /* -------------------------fin bloc actualité------------ */
+/*---------------------------------fin main-------------------------------*/
 
 /* -------------------footer------------------------- */
 
 footer {
     display: flex;
+    background-color: white;
+    color: #303030;
     justify-content: space-between;
     text-align: center;
     font-size: 1.2rem;
-    font-weight: bold;
     padding-top: 20px;
-    width: 100%;
     height: 200px;
     padding-right: 20px;
 }
 footer h4{
     margin-bottom: 20px;
     font-size: 1.4rem;
-    text-decoration: underline;
+    text-decoration: underline red;
+}
+footer address {
+    display: flex;
+    flex-direction: column;
 }
 #propos {
     text-align: center;
 }
+/* -------------------fin footer------------------------- */
+
 /* ----------------------images------------------------------------------- */
 #photo-header-main {
     position: relative;
@@ -230,23 +247,23 @@ footer h4{
     font-size: 2.1rem;
     text-transform: uppercase;
     font-weight: bold;
-    color: red;
     text-shadow: 2px 2px 2px black;
     /* transform: translate(-50%, -50%); */
 }
-/* ------------------------media queries pour tablette---------------------------- */
+figure img#actualite {
+    width: 80%;
+}
+i.fa-chevron-circle-up {
+    margin: 20px 0;
+    font-size: 40px;
+    color: green;
+}
+i.fa-chevron-circle-up:hover {
+    color: #C6B700;
+}
+/* ------------------------media queries pour tablette---------------------------- */    
 @media screen and (min-width:990px) and (max-width:1199px) {
-    footer i {
-        font-size: 30px;
-        padding:10px;
-    }
-    footer p {
-        width: 70%;
-        margin: 0 auto;
-    }
-    footer .footer-contact {
-        width: 30%;
-    }
+    
     #flex {
         flex-direction: row;
         justify-content: space-between;
@@ -254,9 +271,6 @@ footer h4{
     article.styles-combats {
         width: 40%;
     }
-}
-@media screen and (min-width:990px) and (max-width:1199px) {
-    
     article.card-activity {
         width: 50%;
         
@@ -273,10 +287,15 @@ footer h4{
         width: 70%;
         margin: 0 auto;
     }
-    footer .footer-contact {
+    footer address {
         width: 30%;
     }
-  }
+    i.fa-chevron-circle-up {
+        display: flex;
+        justify-content: end;
+        margin-right: 20px;
+    }
+}
 
   @media screen and (min-width:1200px) {
     footer i {
@@ -287,8 +306,9 @@ footer h4{
         width: 70%;
         margin: 0 auto;
     }
-    footer .footer-contact {
+    footer address {
         width: 30%;
+        display: block;
     }
     #flex {
         flex-direction: row;
@@ -301,6 +321,10 @@ footer h4{
     nav h1{
         text-align: center;
     }
+    i.fa-chevron-circle-up {
+        display: flex;
+        justify-content: end;
+        }
  /* ------------------- menu navigation------------------------------- */
  .icon {
     display: none;
@@ -308,14 +332,12 @@ footer h4{
 .nav-menu {
     display: initial;
     position: static;
-    background-color: white;
     border-top: none;
 }
 .nav-item {
     position: relative;
     display: inline-block;
     margin-left: 20px;
-    background-color: white;
 }
 .dropdown {
     position: absolute;
@@ -326,8 +348,10 @@ footer h4{
     width: max-content;
 }
 .nav-menu a {
-    background-color: white;
     color: #303030;
     font-weight: bold;
+    }
+.nav-menu, .nav-item, .nav-menu a {
+    background-color: white;
     }
   }

@@ -6,9 +6,12 @@
 }
 body {
     background-color: white;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 0.5px;
     text-align: center;
+}
+footer{
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 main {
     background-color: #303030;
@@ -43,7 +46,7 @@ li {
 /* ------------------------------------header---------------------- */
 
 .navbar {
-    background-color: white;
+    /* background-color: rgb(255, 255, 255); */
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -77,7 +80,7 @@ li {
 .nav-item a, .drop-item a, .show{
     line-height: 70px;
     font-size: 1.4rem; 
-    color: #fff;
+    /* color: #fff; */
     background-color: #303030;
     padding: 20px;
     transition: all 1s ease-out;
@@ -88,7 +91,7 @@ li {
  color: red;
  letter-spacing: 0.5rem;
  font-weight: bold;
- background-color: #fff;
+ /* background-color: #fff; */
  
 }
 header img {
@@ -111,6 +114,8 @@ main .nouscontacter i{
 main .nouscontacter h1{
     font-weight: bold;
     padding-top: 20px;
+    font-size: 2.2em;
+    color: #C6B700;
 }
 
 main .nouscontacter p{
@@ -126,23 +131,29 @@ span {
     text-decoration: underline;
 }
 /* ---------------------formulaire------------------------------------------- */
-
+.container {
+    min-width: 580px;
+}
 #formulaire p {
     margin-top: 15px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
-    font-weight: bold;
+    
 }
 #formulaire input {
     font-style: italic;
+    height: 20px;
 }
 #formulaire input, #formulaire textarea {
     width: 60%;
     padding:5px;
 }
-#formulaire input:focus, #formulaire textarea:focus {
+#formulaire input:focus, #formulaire textarea:focus, #formulaire button:hover {
  
     background-color: lightgreen;
+}
+div.hidden {
+    display: none;
 }
 #formulaire button {
     width: 20%;
@@ -152,7 +163,6 @@ span {
 }
 
 #formulaire button:hover {
-    background-color: lightgreen;
     transition: all 0.3s ease-in 0s;
 }
 #formulaire button a {
@@ -160,60 +170,76 @@ span {
     font-weight: bold;
     text-shadow: 2px 2px 4px white;
 }
-
-
-/*footer*/
-
-footer {
-    background-color: white;
-    color: #303030;
+input#name, #email, textarea#message {
+    font-size: 1.1rem;
 }
-
+#formulaire span {
+    text-decoration: none;
+    color: rgb(184, 27, 27);
+    font-size: 1.9rem;
+}
+input#rgpd {
+    width: 20px;
+}
+#rgpd-lien {
+    color: #fff;
+}
+#rgpd-lien:hover {
+    color: rgb(184, 27, 27);;
+}
+#obligatoire{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9rem!important;
+    color: rgb(184, 27, 27);
+    width:61%;
+}
 /*------------------dividers-----------------------*/
 
 .divider {
     border-bottom: 5px #C6B700 solid;
     width: 100%;
 }
-.little-divider {
+/* .little-divider {
     border: rgb(224, 0, 0) 1px solid;
     width: 10%;
     display: flex;
     margin: auto;
     margin-bottom: 15px;
-}
+} */
 
 /*------------------------ fin dividers------------------------- */
 
 /* -----------------------------main map------------------------------ */
 main #map h2{
-    margin-bottom: 20px;
     font-size: 1.4rem;
-    text-decoration: underline;
+    color: rgb(184, 27, 27);
 }
-main #map iframe {
+main #map iframe, #map h2 {
     margin-bottom: 20px;
 }
 /* -------------------footer------------------------- */
 
-footer {
+/* footer {
     display: flex;
+    background-color: white;
+    color: #303030;
     justify-content: space-between;
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     padding-top: 20px;
-    width: 100%;
     height: 200px;
     padding-right: 20px;
 }
 footer h4{
     margin-bottom: 10px; 
     font-size: 1.4rem;
+    text-decoration: underline red;
 }
 #propos {
     margin: 0 auto;
-}
+} */
 
 @media screen and (min-width:990px) and (max-width:1199px) {
     
@@ -265,14 +291,12 @@ footer h4{
     .nav-menu {
         display: initial;
         position: static;
-        background-color: white;
         border-top: none;
     }
     .nav-item {
         position: relative;
         display: inline-block;
         margin-left: 20px;
-        background-color: white;
     }
     .dropdown {
         position: absolute;
@@ -283,9 +307,11 @@ footer h4{
         width: max-content;
     }
     .nav-menu a {
-        background-color: white;
         color: #303030;
         font-weight: bold;
+        }
+    .nav-menu, .nav-item, .nav-menu a {
+        background-color: white;
         }
 
 }
