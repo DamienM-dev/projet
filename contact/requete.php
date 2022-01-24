@@ -27,4 +27,3 @@ if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['adresse']) &&
     $requete = $bdd->prepare('INSERT INTO users (nom, email, adresse, message) VALUES (?,?,?,?)');
     $requete->execute(array($nom, $email, $adresse, $message));
 }
-$requete->closeCursor();

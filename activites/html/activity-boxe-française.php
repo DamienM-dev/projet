@@ -1,3 +1,9 @@
+<?php
+require_once('cardClass.php')
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

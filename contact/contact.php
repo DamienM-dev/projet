@@ -64,7 +64,7 @@ require_once('requete.php')
                 </address>
 
                 <div id="formulaire" class="container">
-                        <form  action ="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" id="contact-form" role="form">
+                        <form  name="formulaire" id="contact-form" role="form">
                             <label  id="titre-formulaire"> Ou contacter via notre formulaire de contact:</label>
                             <p>
                                 <label for="name"><span>*</span>Nom : </label><br>
@@ -77,22 +77,23 @@ require_once('requete.php')
                             </p>
                             <p>
                                 <label for="adresse"><span>*</span>adresse : </label><br>
-                                <textarea type="text" class="formulaireBackground" id="adresse" name="adresse" placeholder="Votre adresse " required rows="5"><?= $adresse; ?></textarea>
+                                <input type="text" class="formulaireBackground" id="adresse" name="adresse" placeholder="Votre adresse " required "></input>
                             </p>
+                            <select id="villes" ></select>
                             <p>
                                 <label for="message"><span>*</span>Message : </label><br>
                                 <textarea id="message" class="formulaireBackground" name="message" placeholder="Votre message" required rows="5"><?= $message; ?> </textarea>
                             </p>
-                            <input type="checkbox" class="formulaireBackground"  id="rgpd" required>
-                            <span>*</span>
+                            <!-- <input type="checkbox" class="formulaireBackground"  id="rgpd" required>
+                            <span>*</span> -->
                             <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" id="rgpd-lien">Régle rgbd sur la protection des données</a>
                             </input>
                             <p id="obligatoire"><span>*</span>Champs obligatoire</p>
                             <p>
-                                <button type="submit">Envoyer</button>
+                                <button type="submit" id="envoi">Envoyer</button>
                             </p>
                         </form>
-                        <div class="hidden">Votre formulaire à bien été envoyé ! :)</div>
+                        <div id="hidden">Votre formulaire à bien été envoyé ! :)</div>
                         <div>
                                 <button type="button" id="couleur">changer couleur</button>
                         </div>
@@ -109,8 +110,9 @@ require_once('requete.php')
         
                  <script src="mode.js"></script>
                  <script src="display.js"></script>
-                 <script src="supabase.js"></script>
                  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+                 <script src="supabase.js"></script>
+                 <script src="api.js"></script>
                  
                  
 

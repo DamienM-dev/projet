@@ -1,12 +1,20 @@
-let btn = document.querySelector('button');
-let hidden = document.getElementsByClassName('hidden');
+// let envoi = document.getElementById('envoi');
+// let hidden = document.getElementsByClassName('hidden');
 
 
-btn.addEventListener('click', () => {
+
+// envoi.addEventListener('click', () => {
    
-     hidden.style.display ='block';
+//      if () {
+     
+//           hidden.style.display = "block";
+//      } else {
+//           hidden.style.display = "none"
+//      }
     
-})
+    
+// })
+
 
 
 
