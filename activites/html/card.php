@@ -12,8 +12,23 @@ class Card
         $this->img = $img;
         $this->contents = $contents;
     }
-    public function maxContents () {
 
+    public function returnTitle() {
+        return $this->title;
+    }
+    public function returnImage() {
+        return $this->img;
+    }
+    public function returnContent() {
+        return $this->contents;
+    }
+    public function maxContents () {
+        $max = 50;
+
+        if(strlen($this->contents) >= $max)
+        {
+            $this->contents = substr($this->contents, 0, $max);
+        }
     }
 }
    
