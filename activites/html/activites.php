@@ -1,3 +1,8 @@
+<?php
+require_once('cardClass.php')
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head> 
@@ -58,13 +63,13 @@
                 <div class="style-card">
                     <div class="card-flip-gestion">
                         <div class="card">
-                            <img src="../../image/photo-boxe.jpg" style="width: 300px; height: 300px;" alt="Photo boxe Française">
-                            <h2>boxe Française</h2>
+                            <?php foreach($titles as $title) 
+                            <img src="$title->returnImage()" style="width: 300px; height: 300px;" alt="Photo boxe Française">
+                            <h2>$title->returnTitle()</h2>?>
                         </div>
                         <div class="flip-card-back">
-                            <a href="activity-boxe-française.php"><h2>boxe Française</h2></a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quod veritatis 
-                            sequi inventore amet corporis quibusdam animi maiores dignissimos pariatur?</p>
+                            <a href="activity-boxe-française.php"><h2>$title->returnTitle()</h2></a>
+                            <p>$title->returnContents()</p>
                         </div>
                     </div>
                 </div>

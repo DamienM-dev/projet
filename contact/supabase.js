@@ -1,10 +1,6 @@
+let hidden = document.querySelector(".hidden");
+let envoi = document.querySelector("#envoi");
 
-
-// import { createClient } from '@supabase/supabase-js'
-
-// const supabaseUrl = 'https://zefpahzcyotbxgfbvqai.supabase.co'
-// const supabaseKey = process.env.SUPABASE_KEY
-// const supabase = createClient(supabaseUrl, supabaseKey)
 
 const { createClient } = supabase
       supabase = createClient("https://zefpahzcyotbxgfbvqai.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNjQyNTk3NjM2LCJleHAiOjE5NTgxNzM2MzZ9.yJCJFIl2RW3gKr7HHNFR0X6uW088zwBLogYH-6hEnJU");
@@ -24,15 +20,26 @@ const { createClient } = supabase
             }
           })
 
-          const { error } = await supabase.from('entries').insert([submision], { returning: 'minimal'})
+          const { error, data } = await supabase.from('formulaire').insert([submision], { returning: 'minimal'})
+          console.log({error, data});
 
           if (error) {
-              alert('There was an error please try again')
+              alert("Une erreur est survenue,le formulaire n'apaspu être envoyé :(" )
           } else {
-              alert('Thanks for contacting us')
+            hidden.style.display = 'block';
+            hidden.style.color = '#C6B700';
+            hidden.style.fontWeight = 'bold';
+            hidden.style.margin = '10px';
           }
 
           formInputs.forEach(element => element.value = '')
 
       })
+
+
+
+
+
+
+
 

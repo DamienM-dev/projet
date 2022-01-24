@@ -140,6 +140,8 @@ span {
     text-transform: uppercase;
     
 }
+
+
 #formulaire input {
     font-style: italic;
     height: 20px;
@@ -152,9 +154,7 @@ span {
  
     background-color: lightgreen;
 }
-div.hidden {
-    display: none;
-}
+
 #formulaire button {
     width: 20%;
     padding: 5px 0;
@@ -193,6 +193,10 @@ input#rgpd {
     font-size: 0.9rem!important;
     color: rgb(184, 27, 27);
     width:61%;
+}
+.hidden {
+    display: none;
+    
 }
 /*------------------dividers-----------------------*/
 
