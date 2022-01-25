@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main {
+    background-color: #303030;
+    color: white;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+p {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+a {
+     text-decoration: none;
+     color:red; 
+
+}
+li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ------------------------------------header---------------------- */
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.icon {
+    fill: #303030;
+    cursor: pointer;
+}
+.navbar input, .nav-menu, .dropdown {
+    display: none;
+}
+
+[id^=btn]:checked + ul {
+    display: block;
+}
+/* quand id commencant par btn est coché, alors je cache mon menu ul*/
+
+.nav-menu {
+    position: absolute;
+    background-color: #303030;
+    top: 142px;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+    border-top: 5px #C6B700 solid;
+    width: 100%;
+    z-index: 4;
+
+}
+.nav-item a, .drop-item a, .show{
+    line-height: 70px;
+    font-size: 1.4rem; 
+    color: #fff;
+    background-color: #303030;
+    padding: 20px;
+    transition: all 1s ease-out;
+    border-radius: 20px;
+}
+
+.nav-menu a:hover, .show:hover, .nav-menu a:focus, .show:focus{
+ color: red;
+ font-weight: bold;
+ letter-spacing: 0.5rem;
+ background-color: #fff;
+}
+header img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   margin-top: 20px;
+}
+/* -------------------------main------------------ */
+main {
+    padding-bottom: 15px;
+    width: 100%;
+}
+ .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+} 
+#photo-header-main {
+    position: relative;
+}
+#photo-header-main img {
+    width: 100%;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+#photo-header-main h1 {
+    position: absolute;
+    top:40%;
+    right: 37%;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    /* transform: translate(-50%, -50%); */
+}
+/* ----------------------------gestion image---------------------------------------------- */
+
+
+/*------------------dividers-----------------------*/
+
+.divider {
+    border-bottom: 5px #C6B700 solid;
+    width: 100%;
+}
+/* .little-divider {
+    border: rgb(224, 0, 0) 1px solid;
+    width: 10%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 15px;
+} */
+
+/*------------------------ fin dividers------------------------- */
+
+/* -------------------footer------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    height: 200px;
+    padding-right: 20px;
+    background-color: white;
+    color: #303030;
+}
+footer h4{
+    margin-bottom: 10px; 
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: underline red;
+}
+#propos {
+    margin: 0 auto;
+}
+footer address {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+/* -------------------fin footer------------------------- */
+
+/* -------------------main activity-boxe------------------------- */
+/* --------------------------table------------------------------------- */
+
+td {
+    border: 2px solid red;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+thead h4 {
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+td {
+    padding: 10px;
+}
+.horaire h4 {
+    margin: 10px 0;
+    text-decoration: underline #C6B700;
+}
+.active {
+    background-color: greenyellow;
+    color: #303030;
+}
+.horaire table {
+    width: 100%;
+    margin: 0 auto;
+}
+.tableau-background {
+    background-color: white;
+    color: #303030;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase
+}
+/* --------------------------fin table------------------------------------- */
+
+
+.block-haut {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.block-haut img {
+    height:400px; 
+    width:100%
+}
+
+.block-haut h1 {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.block-histoire {
+    margin-bottom: 20px;
+}
+main#boxe-francaise h2 {
+    margin-bottom: 20px;
+
+}
+main#boxe-francaise img, main#boxe-francaise p {
+    margin-bottom: 20px;
+}
+main#boxe-francaise h3 {
+    margin-bottom: 15px;
+    border: 2px solid #C6B700;
+    width: 30%;
+    margin: 20px auto;
+
+}
+/* -------------------------block enseignant-----------------------------------------*/
+main .blocks-img-enseignant img {
+height: 250px;
+width: 350px;
+}
+/* -------------------media queries tablette---------------------------------------------- */
+
+@media screen and (min-width:990px) and (max-width:1199px) {
+
+    footer i {
+        font-size: 30px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer address {
+        width: 30%;
+    }
+    main .blocks-img-enseignant {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        }
+    .blocks-img-enseignant1{
+        width: 40%;
+    }
+    .blocks-img-enseignant2 {
+        width: 40%;
+    }
+    #image-solo-enseignant {
+        margin: 0 auto;
+    }
+    .block-haut img {
+        height: 600px;
+        width: 100%;
+    }
+}
+
+
+/* -------------------media queries grand ecran-------------------------------------- */
+@media screen and (min-width:1200px) {
+    footer i {
+        font-size: 40px;
+        padding:10px;
+    }
+    footer p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    footer address {
+        display: block;
+        width: 30%;
+    }
+    main .blocks-img-enseignant {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        }
+    .blocks-img-enseignant1{
+        width: 40%;
+    }
+    .blocks-img-enseignant2 {
+        width: 40%;
+    }
+    #image-solo-enseignant {
+        margin: 0 auto;
+    }
+    .block-haut img {
+        height: 650px;
+        width: 100%;
+    }
+    /* ------------------- menu navigation------------------------------- */
+ .icon {
+    display: none;
+}
+.nav-menu {
+    display: initial;
+    position: static;
+    background-color: white;
+    border-top: none;
+}
+.nav-item {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    background-color: white;
+}
+.dropdown {
+    position: absolute;
+    background-color: #303030;
+    top: 70px;
+    right: 0;
+    padding: 40px;
+    width: max-content;
+}
+.nav-menu a {
+    background-color: white;
+    color: #303030;
+    font-weight: bold;
+    }
+}
